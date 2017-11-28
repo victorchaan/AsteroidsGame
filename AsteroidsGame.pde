@@ -1,10 +1,26 @@
-//your variable declarations here
+Spaceship falcon = new Spaceship();
+Star[] galaxy = new Star [200];
+Asteroid ego = new Asteroid();
 public void setup() 
 {
-  //your code here
+  size (400, 500);
+  background(0);
+  for (int i = 1; i < galaxy.length; i++)
+  {
+    galaxy[i] = new Star();
+  }
 }
 public void draw() 
 {
-  //your code here
-}
+  background(0);
+    for (int i = 1; i < galaxy.length; i++)
+  {
+    galaxy[i].show();
+  }
+  falcon.show();
+  falcon.move();
+  ego.show();
+  ego.move();
+  
 
+}
