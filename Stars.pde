@@ -3,12 +3,12 @@ public class Star
   private int myX, myY;
   public Star()
   {
-    myX = (int)(Math.random()*500);
-    myY = (int)(Math.random()*500);
+    myX = (int)(Math.random()*900);
+    myY = (int)(Math.random()*900);
   }
   public void show ()
   {
-    fill(#1DDB54);
+    fill(#FF48EA);
     ellipse(myX, myY, 3, 3);
   }
 }
