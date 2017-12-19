@@ -17,16 +17,16 @@ public void setup()
 public void draw() 
 {
   background(0);
-
-
-  Bob.show();
-  Bob.move();
-  
   for (int i = 1; i < joe.length; i++)
   {
     joe[i].show();
   }
  
+
+  Bob.show();
+  Bob.move();
+  
+
  
   for (int a = 0; a < gameAsteroids.size(); a++) {
     Asteroid i = gameAsteroids.get(a);
