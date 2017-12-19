@@ -2,14 +2,15 @@ class Asteroid extends Floater
 {
   private int rotationSpeed;
   public Asteroid(){
-    rotationSpeed = 2-(int)(Math.random() * 3) ;
+    rotationSpeed = 2 - (int)(Math.random() * 4) ;
     corners = 7;
-    myColor = #1DDB54;
-    myCenterX = 200;
-    myCenterY = 200;
-    myDirectionX = 0;
-    myDirectionY = 0;
+    myColor = #F22ADB;
+    myCenterX = Math.random() * 900;
+    myCenterY = Math.random() * 900;
+    myDirectionX = Math.random()*3 - 3;
+    myDirectionY = Math.random()*3 - 3;
     myPointDirection = 0;
+
     xCorners = new int[corners];
     yCorners = new int[corners];
     xCorners[0] = 0;
@@ -37,11 +38,11 @@ class Asteroid extends Floater
     public double getDirectionX(){return myDirectionX;}
     public double getDirectionY(){return myDirectionY;}
     public double getPointDirection(){return myPointDirection;}
-     public void move ()   //move the floater in the current direction of travel
+    public void move ()   
   {      
     //change the x and y coordinates by myDirectionX and myDirectionY       
-    myCenterX += myDirectionX;    
-    myCenterY += myDirectionY;     
+    myCenterX += myDirectionX; 
+    myCenterY += myDirectionY;      
     myPointDirection+=5*rotationSpeed;  
 
     //wrap around screen    
@@ -61,7 +62,8 @@ class Asteroid extends Floater
     else if (myCenterY < 0)
     {     
       myCenterY = height;    
-    }   
+   }   
+    
   }   
     
 }
